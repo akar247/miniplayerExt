@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MiniPlayer</title>
+    <style>
+      body {
+        background-color: #222;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #videoPlayer {
+        width: 100%;
+        height: 100%;
+      }
+
+      .miniplayer-controls {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .miniplayer-button {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #222;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .miniplayer-button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <video id="videoPlayer" controls></video>
+    <div class="miniplayer-controls">
+      <button id="playPauseButton" class="miniplayer-button">Play/Pause</button>
+      <div>
+        <button id="skipBackwardButton" class="miniplayer-button"><<</button>
+        <button id="skipForwardButton" class="miniplayer-button">>></button>
+      </div>
+    </div>
+    <script src="miniplayer.js"></script>
+  </body>
+</html>

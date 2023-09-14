@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "MiniPlayer Extension",
+    "version": "1.0",
+    "description": "Adds a miniplayer UI for YouTube and Netflix videos",
+    "permissions": [
+      "scripting",
+      "activeTab"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "host_permissions": [
+      "*://www.youtube.com/*",
+      "*://www.netflix.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
